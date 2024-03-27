@@ -1,25 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
+// App.js
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import ChupAnh from './screens/ChupAnh';
-import ChonAnh from './screens/ChonAnh';
-import NgheNhac from './screens/NgheNhac';
+import { Provider } from 'react-redux';
 
-export default function App() {
+// import store from './bai1/store';
+// import ChupAnh from './bai1/view';
+
+import store from './bai2/store';
+import ChonAnh from './bai2/view';
+
+const App = () => {
   return (
-    <View style={styles.container}>
-      <NgheNhac/>
-      {/* <ChupAnh/> */}
-      {/* <ChonAnh/> */}
-    </View>
-  );
-}
+    // <Provider store={store}>
+    //   <ChupAnh /> 
+    // </Provider>
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+    <Provider store={store}>
+    <ChonAnh />
+  </Provider>
+  );
+};
+
+export default App;

@@ -3,7 +3,7 @@
     "name": "my-new-project",
     "slug": "my-new-project",
     "version": "1.0.0",
-    "permissions": ["CAMERA", "MEDIA_LIBRARY"],
+    "permissions": ["CAMERA", "READ_EXTERNAL_STORAGE", "WRITE_EXTERNAL_STORAGE"],
     "assetBundlePatterns": [
       "**/*"
     ]
